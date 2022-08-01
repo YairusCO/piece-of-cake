@@ -1,4 +1,4 @@
-@import '../../utils/cssUntil.scss';
+@import '../../util/cssUntil.scss';
 
 .home {
   padding: 0 0 100px 0;
@@ -6,7 +6,7 @@
   .hey-user {
     margin: 0 0 10px 0;
     font-size: 50px;
-    color: $PrimaryInsurers;
+    color: #9818c1;
   }
 
   .welcome-to {
@@ -25,16 +25,15 @@
       cursor: pointer;
       .insurer-card-icon {
         margin-top: 56px;
-        svg{
-            width: 100px;
-            height: 100px;
+        .fit-picture{
+            width: 200px;
         }
       }
       &:first-child {
         margin-right: 24px;
       }
       .insurer-card-title {
-        color: $PrimaryInsurers;
+        color:  #9818c1;
         font-size: 20px;
         line-height: 32px;
         text-transform: uppercase;

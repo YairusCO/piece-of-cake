@@ -1,41 +1,47 @@
 import React from 'react'
-import { ReactComponent as Bake } from '../../assets/bake.svg'
-import { ReactComponent as Cake } from '../../assets/cake.svg'
-const Home = () => {
+import  bake  from '../../assets/bake.jpg'
+import  cake  from '../../assets/cake.jpg'
+import { ADD,SELECTED } from '../../util/routes'
+import history from '../../service/history'
+
+const Home = ({t}) => {
+  const route = (path) => {
+    history.push(path)
+  }
   return (
     <div className='home' data-testid='Home'>
-        <div className='hey-user'>hey baker</div>
+        <div className='hey-user'>{t('home.hey-baker')}</div>
       <div className='welcome-to'>welcome back</div>
       <div className='cards-warp'>
         <div
           className='insurer-card'
           
-          // onClick={() => route(PRICING_WIZARD)}
+          onClick={() => route(SELECTED)}
         >
           <div className='insurer-card-icon'>
-            <Bake/>
-            {/* {isQuoteHover ? <NewQuoteHoverIcon /> : <NewQuoteIcon />} */}
+          <img className="fit-picture"
+     src={bake} alt=''/>
+           
           </div>
-          <div className='insurer-card-title'>get a new cake</div>
-          <div className='insurer-card-text quote-text'>
+          <div className='insurer-card-title'>Add a new bake</div>
+          {/* <div className='insurer-card-text quote-text'>
             get an cake
-          </div>
+          </div> */}
         </div>
         <div
           className='insurer-card'
-          // onMouseEnter={toggleDealsIcon}
-          // onMouseLeave={toggleDealsIcon}
-          // onClick={() => route(MY_DEALS)}
+         
         >
           <div className='insurer-card-icon my-deals'>
-          <Cake/>
+          <img className="fit-picture"
+     src={cake} alt=''/>
 
-            {/* {isDealsHover ? <MyDealsHoverIcon /> : <MyDealsIcon />} */}
+           
           </div>
-          <div className='insurer-card-title'>my cake</div>
-          <div className='insurer-card-text my-deals-text'>
+          <div className='insurer-card-title'>My bakes</div>
+          {/* <div className='insurer-card-text my-deals-text'>
             follow the cake
-          </div>
+          </div> */}
         </div>
       </div>
     
