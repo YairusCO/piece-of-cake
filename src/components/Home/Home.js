@@ -2,7 +2,7 @@ import React from 'react'
 import  bake  from '../../assets/bake.jpg'
 import  cake  from '../../assets/cake.jpg'
 import { ADD,SELECTED } from '../../util/routes'
-import history from '../../service/history'
+import history from '../../services/history'
 
 const Home = ({t}) => {
   const route = (path) => {
