@@ -1,7 +1,7 @@
 import React from 'react'
 import  bake  from '../../assets/bake.jpg'
 import  cake  from '../../assets/cake.jpg'
-import { ADD,SELECTED } from '../../util/routes'
+import {SELECT_INGREDIENT } from '../../util/routes'
 import history from '../../services/history'
 
 const Home = ({t}) => {
@@ -16,7 +16,7 @@ const Home = ({t}) => {
         <div
           className='insurer-card'
           
-          onClick={() => route(SELECTED)}
+          onClick={() => route(SELECT_INGREDIENT)}
         >
           <div className='insurer-card-icon'>
           <img className="fit-picture"

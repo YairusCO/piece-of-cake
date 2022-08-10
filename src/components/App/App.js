@@ -7,7 +7,7 @@ import Intro from '../Intro'
 import Layout from '../Layout'
 import Selected from '../Selected'
 import history from '../../services/history'
-import {ADD, HOME} from '../../util/routes'
+import {ADD, HOME, SELECT_INGREDIENT} from '../../util/routes'
 function App() {
   return (
     <div className="app"> 
@@ -18,7 +18,7 @@ function App() {
       <Layout> 
         <Route exact path={HOME} component={Home} />
         <Route exact path={ADD} component={Intro } />
-        <Route exact path="/selected" component={Selected } />
+        <Route exact path={SELECT_INGREDIENT} component={Selected } />
          </Layout> 
           </Switch>
         </Router>
