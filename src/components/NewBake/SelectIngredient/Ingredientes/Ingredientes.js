@@ -1,19 +1,14 @@
-import { Grid, Typography } from "@mui/material";
 import React from "react";
-import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
+import { Grid, Typography, CardActions,Card ,CardHeader, CardMedia, CardContent, Button} from "@mui/material";
+
 import img from '../../../../assets/bake.jpg'
-const Ingredientes = ({product, idx}) => {
-  // debugger
+const Ingredientes = ({product, idx, t}) => {
   const {item}=product
   // console.log(product);
   return (
     <Grid className="ingredientes" data-testid="Ingredientes">
       <Card>
-        <CardHeader title={product.item}/>
+        <CardHeader title={t(`add.${product.item}`)}/>
         {/* <CardHeader title='hello'/> */}
         <CardMedia
         component="img"
@@ -21,6 +16,11 @@ const Ingredientes = ({product, idx}) => {
         image={img}
         alt="Paella dish"
       />
+       <CardActions>
+        <Button size="large" color="primary">
+          {t('add.add')}
+        </Button>
+      </CardActions>
       </Card>
     </Grid>
   );
