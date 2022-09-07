@@ -1,6 +1,5 @@
-import logo from '../../logo.svg'
 import React, { useEffect } from 'react'
-import {Router , Switch, Route } from 'react-router-dom'
+import { BrowserRouter  , Routes, Route } from 'react-router-dom'
 import Home from '../Home'
 import Header from '../Header'
 import Intro from '../Intro'
@@ -13,15 +12,16 @@ function App() {
     <div className="app"> 
       <Header/>
       <div className="center">
-      <Router history={history}>
-          <Switch>
-      <Layout> 
-        <Route exact path={HOME} component={Home} />
-        <Route exact path={ADD} component={Intro } />
-        <Route exact path={SELECT_INGREDIENT} component={SelectIngredient } />
-         </Layout> 
-          </Switch>
-        </Router>
+      <BrowserRouter history={history}>
+          <Routes>
+          {/* <Route exact path="/" element={<Layout/>}> */}
+   
+        <Route exact path={HOME} element={<Home/>} />
+        <Route exact path={ADD} element={<Intro/> } />
+        <Route exact path={SELECT_INGREDIENT} element={<SelectIngredient/> } />
+{/* </Route> */}
+          </Routes>
+        </BrowserRouter>
     </div>
     </div>
   )
