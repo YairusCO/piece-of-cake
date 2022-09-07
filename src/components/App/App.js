@@ -12,16 +12,15 @@ function App() {
     <div className="app"> 
       <Header/>
       <div className="center">
+      <Layout>
       <BrowserRouter history={history}>
           <Routes>
-          {/* <Route exact path="/" element={<Layout/>}> */}
-   
         <Route exact path={HOME} element={<Home/>} />
         <Route exact path={ADD} element={<Intro/> } />
         <Route exact path={SELECT_INGREDIENT} element={<SelectIngredient/> } />
-{/* </Route> */}
           </Routes>
         </BrowserRouter>
+        </Layout>
     </div>
     </div>
   )
