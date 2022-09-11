@@ -51,105 +51,105 @@ $md: 1024px;
 $sm: 768px;
 
 @mixin Title {
-  font-size: 40px;
-  color: #5855e4;
+	font-size: 40px;
+	color: #5855e4;
 }
 
 @mixin Center {
-  left: 0;
-  right: 0;
-  margin: auto;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 
 @mixin FlexCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 @mixin VerticalAlign {
-  top: 50%;
-  transform: translateY(-50%);
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 @mixin LinkPrimaryInvestors {
-  color: $PrimaryInvestors;
-  text-decoration-color: $PrimaryInvestors;
+	color: $PrimaryInvestors;
+	text-decoration-color: $PrimaryInvestors;
 }
 .FlexAlignCenter {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 @mixin dataUploadDialog {
-  padding: 50px 0 70px 0;
-  .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  color: #4a4a4a;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 643px;
-  .menu-bar {
-    position: absolute;
-    right: 13px;
-    top: 9px;
-    .close-btn {
-      margin: 0;
-    }
-  }
+	padding: 50px 0 70px 0;
+	.main-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	color: #4a4a4a;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 643px;
+	.menu-bar {
+		position: absolute;
+		right: 13px;
+		top: 9px;
+		.close-btn {
+			margin: 0;
+		}
+	}
 }
 
 @mixin dataUploadBtn {
-  padding: 8px 30px;
-  border-radius: 6px;
+	padding: 8px 30px;
+	border-radius: 6px;
 }
 
 @mixin dataUploadDoneBtn {
-  padding: 2px 22px;
-  border-radius: 6px;
-  font-size: 16px;
+	padding: 2px 22px;
+	border-radius: 6px;
+	font-size: 16px;
 }
 
 @mixin fileUploadError {
-  width: 100%;
-  text-align: center;
-  color: $UploadErrorColor;
-  margin: 28px 0 14px;
-  font-size: 13px;
-  overflow-y: auto;
-  height: 32px;
+	width: 100%;
+	text-align: center;
+	color: $UploadErrorColor;
+	margin: 28px 0 14px;
+	font-size: 13px;
+	overflow-y: auto;
+	height: 32px;
 }
 @mixin myFilesDataUploadBtn {
-  padding: 5px 28px;
-  background: #18c19b;
-  box-shadow: 0px 4px 8px rgba(74, 74, 74, 0.2);
-  border-radius: 6px;
+	padding: 5px 28px;
+	background: #18c19b;
+	box-shadow: 0px 4px 8px rgba(74, 74, 74, 0.2);
+	border-radius: 6px;
 }
 
 @mixin smallLoader {
-  border: 3px solid #eff4f4;
-  border-top: 3px solid $PrimaryColor;
-  border-bottom: 3px solid $PrimaryColor;
-  border-right: 3px solid $PrimaryColor;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  animation: spin 1s linear infinite;
-  box-sizing: border-box;
+	border: 3px solid #eff4f4;
+	border-top: 3px solid $PrimaryColor;
+	border-bottom: 3px solid $PrimaryColor;
+	border-right: 3px solid $PrimaryColor;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	animation: spin 1s linear infinite;
+	box-sizing: border-box;
 }
 
 @mixin spinner-warp {
-  background: #ffffff85;
-  position: fixed;
-  display: flex;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 999;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+	background: #ffffff85;
+	position: fixed;
+	display: flex;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 999;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 }

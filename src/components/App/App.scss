@@ -1,16 +1,16 @@
 .app {
-  font-size: 24px;
-  height: calc(100vh - 73px);
-  overflow-y: auto;
-  margin-top: 73px;
-.center {
-    margin-top: 0;
-    text-align: center;
-    overflow-y: auto;
-    height: 100%;
-  }
+	font-size: 24px;
+	height: calc(100vh - 73px);
+	overflow-y: auto;
+	margin-top: 73px;
+	.center {
+		margin-top: 0;
+		text-align: center;
+		overflow-y: auto;
+		height: 100%;
+	}
 }
 
 .MuiTouchRipple-root {
-  display: none;
+	display: none;
 }

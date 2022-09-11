@@ -1,83 +1,83 @@
 @import '../../util/cssUntil.scss';
 
 .home {
-  padding: 0 0 100px 0;
-  margin-top: 48px;
-  .hey-user {
-    margin: 0 0 10px 0;
-    font-size: 50px;
-    color: #9818c1;
-  }
+	padding: 0 0 100px 0;
+	margin-top: 48px;
+	.hey-user {
+		margin: 0 0 10px 0;
+		font-size: 50px;
+		color: #9818c1;
+	}
 
-  .welcome-to {
-    margin-top: 8px;
-    font-size: 20px;
-    color: $FontGreyDark;
-  }
-  .cards-warp {
-    display: inline-flex;
-    margin-top: 64px;
-    .insurer-card {
-      width: 400px;
-      height: 320px;
-      box-shadow: 0 0 9px rgba(74, 74, 74, 0.16);
-      border-radius: 8px;
-      cursor: pointer;
-      .insurer-card-icon {
-        margin-top: 56px;
-        .fit-picture{
-            width: 200px;
-        }
-      }
-      &:first-child {
-        margin-right: 24px;
-      }
-      .insurer-card-title {
-        color:  #9818c1;
-        font-size: 20px;
-        line-height: 32px;
-        text-transform: uppercase;
-        font-weight: 500;
-      }
-      .insurer-card-text {
-        font-size: 16px;
-        color: $FontGreyDark;
-        font-weight: 400;
-        margin-top: 16px;
-        line-height: 24px;
-      }
-      .quote-text {
-        padding: 0 48px;
-      }
-      .my-deals-text {
-        padding: 0 17px;
-      }
-    }
-  }
-  .title {
-    text-transform: uppercase;
-    color: $PrimaryColor;
-  }
-  .main-btn-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 8px 0;
-  }
+	.welcome-to {
+		margin-top: 8px;
+		font-size: 20px;
+		color: $FontGreyDark;
+	}
+	.cards-warp {
+		display: inline-flex;
+		margin-top: 64px;
+		.insurer-card {
+			width: 400px;
+			height: 320px;
+			box-shadow: 0 0 9px rgba(74, 74, 74, 0.16);
+			border-radius: 8px;
+			cursor: pointer;
+			.insurer-card-icon {
+				margin-top: 56px;
+				.fit-picture {
+					width: 200px;
+				}
+			}
+			&:first-child {
+				margin-right: 24px;
+			}
+			.insurer-card-title {
+				color: #9818c1;
+				font-size: 20px;
+				line-height: 32px;
+				text-transform: uppercase;
+				font-weight: 500;
+			}
+			.insurer-card-text {
+				font-size: 16px;
+				color: $FontGreyDark;
+				font-weight: 400;
+				margin-top: 16px;
+				line-height: 24px;
+			}
+			.quote-text {
+				padding: 0 48px;
+			}
+			.my-deals-text {
+				padding: 0 17px;
+			}
+		}
+	}
+	.title {
+		text-transform: uppercase;
+		color: $PrimaryColor;
+	}
+	.main-btn-container {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin: 8px 0;
+	}
 }
 
-@media screen and ( max-width: $md) {
-  .cards-warp {
-    .insurer-card {
-      width: 368px !important;
-    }
-  }
+@media screen and (max-width: $md) {
+	.cards-warp {
+		.insurer-card {
+			width: 368px !important;
+		}
+	}
 }
 
-@media screen and ( max-width: $sm) {
-  .cards-warp {
-    .insurer-card {
-      width: 280px !important;
-    }
-  }
+@media screen and (max-width: $sm) {
+	.cards-warp {
+		.insurer-card {
+			width: 280px !important;
+		}
+	}
 }
