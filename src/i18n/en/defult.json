@@ -1,16 +1,15 @@
 {
-    "home":{
-        "hey-baker": "hey baker"
-    },
+	"home": {
+		"hey-baker": "hey baker"
+	},
 
-    "add":{
-        "add": "ADD",
-        "add-a-new-bake":"Add a new bake",
-        "butter": "Butter",
-        "flour-bleached-wheat":"Flour Wheat",
-        "granulated-white-sugar":"White Sugar",
-        "condensed-milk": "Condensed Milk",
-        "eggs":"Eggs"
-
-    }
+	"add": {
+		"add": "ADD",
+		"add-a-new-bake": "Add a new bake",
+		"butter": "Butter",
+		"flour-bleached-wheat": "Flour Wheat",
+		"granulated-white-sugar": "White Sugar",
+		"condensed-milk": "Condensed Milk",
+		"eggs": "Eggs"
+	}
 }
