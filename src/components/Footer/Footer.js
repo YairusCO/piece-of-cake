@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from '@mui/material/Link'
 import { ReactComponent as LinkedInLogo } from '../../assets/linkedin-logo.svg'
-
 import { LINKEDIN } from './conatants'
+
 const Footer = ({}) => {
 	return (
 		<div className="footer" data-testid="footer">

@@ -1,9 +1,11 @@
 {
 	"home": {
-		"hey-baker": "hey baker"
+		"hey-baker": "Hey, baker!",
+		"welcome-title": "Welcome back",
+		"bakes": "My bakes"
 	},
-
 	"add": {
+		"title": "Add a new bake",
 		"add": "ADD",
 		"add-a-new-bake": "Add a new bake",
 		"butter": "Butter",

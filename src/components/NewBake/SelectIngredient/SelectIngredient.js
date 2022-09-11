@@ -1,6 +1,6 @@
 import { Grid, Typography } from '@mui/material'
 import React from 'react'
-import Ingredientes from './Ingredientes'
+import Ingredients from './Ingredientes'
 import list from './list.json'
 
 const SelectIngredient = () => {
@@ -8,16 +8,16 @@ const SelectIngredient = () => {
 		<div>
 			<Typography> add item to bake</Typography>
 			<Grid container>
-				<Grid xs={3} className="added-list"></Grid>
-
+				<Grid item xs={3} className="added-list"></Grid>
 				<Grid
+					item
 					xs={9}
 					className="select-ingredient"
 					data-testid="SelectIngredient"
 					container
 				>
 					{list.product?.map((product, idx) => {
-						return <Ingredientes product={product} idx={idx} key={idx} />
+						return <Ingredients product={product} idx={idx} key={idx} />
 					})}
 				</Grid>
 			</Grid>
