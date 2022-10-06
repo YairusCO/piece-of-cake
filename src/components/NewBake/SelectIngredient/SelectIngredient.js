@@ -1,14 +1,20 @@
-import { Grid, Typography } from '@mui/material'
+import { Button, Grid, Typography } from '@mui/material'
 import React from 'react'
 import Ingredients from './Ingredientes'
 import list from './list.json'
+import ItemList from '../ItemList'
 
 const SelectIngredient = () => {
 	return (
-		<div>
-			<Typography> add item to bake</Typography>
+		<div className="select-ingredient">
+			<Typography className="select-title"> add item to bake</Typography>
 			<Grid container>
-				<Grid item xs={3} className="added-list"></Grid>
+				<Grid item container xs={3} className="added-list">
+					<ItemList />
+					<Grid>
+						<Button>next</Button>
+					</Grid>
+				</Grid>
 				<Grid
 					item
 					xs={9}

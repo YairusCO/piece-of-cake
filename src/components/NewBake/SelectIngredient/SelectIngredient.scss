@@ -1,2 +1,15 @@
-.Select-ingredient {
+.select-ingredient {
+	.select-title {
+		background-color: #eeeeee;
+		font-size: 2rem;
+		text-transform: uppercase;
+	}
+}
+
+.added-list {
+	border-right: 1px solid #eeeeee;
+	box-shadow: 0 0px 3px 0px rgb(0 0 0 / 50%);
+	justify-content: space-between;
+	// -webkit-flex-direction: column;
+	flex-direction: column !important;
 }
