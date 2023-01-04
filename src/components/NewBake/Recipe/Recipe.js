@@ -1,15 +1,14 @@
 import React from 'react'
-import Ingredients from './Ingredientes'
+import Ingredients from '../SelectIngredient/Ingredientes'
 import { Button, Grid, Typography } from '@mui/material'
-import list from './list.json'
+import list from '../SelectIngredient/list.json'
 import ItemList from '../ItemList'
 import { Link } from 'react-router-dom'
 import { RECIPE } from '../../../util/routes'
-
-const SelectIngredient = () => {
+const Recipe = () => {
 	return (
-		<div className="select-ingredient">
-			<Typography className="select-title"> add item to bake</Typography>
+		<div className="recipe" data-testid="Recipe">
+			<Typography className="select-title"> Recipe component</Typography>
 			<Grid container>
 				<Grid item container xs={3} className="added-list">
 					<ItemList />
@@ -33,4 +32,4 @@ const SelectIngredient = () => {
 	)
 }
 
-export default SelectIngredient
+export default Recipe

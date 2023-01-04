@@ -1,9 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from '../Home'
+import Recipe from '../NewBake/Recipe'
 import Layout from '../Layout'
 import SelectIngredient from '../NewBake/SelectIngredient'
-import { HOME, SELECT_INGREDIENT } from '../../util/routes'
+import { HOME, SELECT_INGREDIENT, RECIPE } from '../../util/routes'
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 					<Layout>
 						<Routes>
 							<Route exact path={HOME} element={<Home />} />
+							<Route exact path={RECIPE} element={<Recipe />} />
 							<Route
 								exact
 								path={SELECT_INGREDIENT}
