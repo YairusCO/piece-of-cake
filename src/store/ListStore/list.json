@@ -1,0 +1,44 @@
+{
+	"product": [
+		{ "item": "butter", "price": "4.3", "unit": "gram", "currency": "ILS" },
+		{
+			"item": "flour bleached wheat",
+			"price": "0.5",
+			"unit": "gram",
+			"currency": "ILS"
+		},
+		{
+			"item": "granulated white sugar",
+			"price": "0.5",
+			"unit": "gram",
+			"currency": "ILS"
+		},
+		{
+			"item": "condensed milk",
+			"price": "1.9",
+			"type": "ml",
+			"currency": "ILS"
+		},
+		{ "item": "eggs", "price": "1", "type": "each", "currency": "ILS" },
+		{ "item": "butter", "price": "4.3", "unit": "gram", "currency": "ILS" },
+		{
+			"item": "flour bleached wheat",
+			"price": "0.5",
+			"unit": "gram",
+			"currency": "ILS"
+		},
+		{
+			"item": "granulated white sugar",
+			"price": "0.5",
+			"unit": "gram",
+			"currency": "ILS"
+		},
+		{
+			"item": "condensed milk",
+			"price": "1.9",
+			"type": "ml",
+			"currency": "ILS"
+		},
+		{ "item": "eggs", "price": "1", "type": "each", "currency": "ILS" }
+	]
+}

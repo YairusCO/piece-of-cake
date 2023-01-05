@@ -1,4 +1,5 @@
-import React from 'react'
+import { useEffect } from 'react'
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from '../Home'
 import Recipe from '../NewBake/Recipe'
@@ -6,7 +7,13 @@ import Layout from '../Layout'
 import SelectIngredient from '../NewBake/SelectIngredient'
 import { HOME, SELECT_INGREDIENT, RECIPE } from '../../util/routes'
 
-function App() {
+function App({ appWillUnmount, appMounted }) {
+	useEffect(() => {
+		appMounted()
+		return () => {
+			appWillUnmount()
+		}
+	}, [appMounted, appWillUnmount])
 	return (
 		<div className="app">
 			<div className="center">
