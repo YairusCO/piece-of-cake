@@ -6,22 +6,25 @@ import {
 	Card,
 	CardHeader,
 	CardMedia,
-	CardContent,
 	Button,
 } from '@mui/material'
 
 import img from '../../../../assets/bake.jpg'
-const Ingredientes = ({ product, idx, t }) => {
+const Ingredientes = ({ product, t, handleClick }) => {
 	const { item } = product
-	// console.log(product);
 	return (
 		<Grid className="ingredientes" data-testid="Ingredientes">
 			<Card>
-				<CardHeader title={t(`add.${product.item}`)} />
-				{/* <CardHeader title='hello'/> */}
+				<CardHeader title={t(`add.${item}`)} />
 				<CardMedia component="img" height="194" image={img} alt="Paella dish" />
 				<CardActions>
-					<Button size="large" color="primary">
+					<Button
+						size="large"
+						color="primary"
+						onClick={() => {
+							handleClick(item)
+						}}
+					>
 						{t('add.add')}
 					</Button>
 				</CardActions>

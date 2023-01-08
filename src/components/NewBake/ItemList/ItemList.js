@@ -11,46 +11,38 @@ import CakeIcon from '@mui/icons-material/Cake'
 import DeleteIcon from '@mui/icons-material/Delete'
 import { styled } from '@mui/material/styles'
 
-function generate(element) {
-	return [0, 1, 2].map((value) =>
-		React.cloneElement(element, {
-			key: value,
-		})
-	)
-}
 const Demo = styled('div')(({ theme }) => ({
 	backgroundColor: theme.palette.background.paper,
 }))
 
-const ItemList = () => {
-	const [dense, setDense] = React.useState(false)
-	const [secondary, setSecondary] = React.useState(false)
+const ItemList = ({ shoppingList, t }) => {
+	console.log(shoppingList)
 	return (
 		<Grid className="item-list" data-testid="ItemList">
 			<Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
 				List
 			</Typography>
 			<Demo>
-				<List dense={dense}>
-					{generate(
-						<ListItem
-							secondaryAction={
-								<IconButton edge="end" aria-label="delete">
-									<DeleteIcon />
-								</IconButton>
-							}
-						>
-							<ListItemAvatar>
-								<Avatar>
-									<CakeIcon />
-								</Avatar>
-							</ListItemAvatar>
-							<ListItemText
-								primary="item"
-								secondary={secondary ? 'Secondary text' : null}
-							/>
-						</ListItem>
-					)}
+				<List>
+					{Object.values(shoppingList).map((product, idx) => {
+						return (
+							<ListItem
+								key={idx}
+								secondaryAction={
+									<IconButton edge="end" aria-label="delete">
+										<DeleteIcon />
+									</IconButton>
+								}
+							>
+								<ListItemAvatar>
+									<Avatar>
+										<CakeIcon />
+									</Avatar>
+								</ListItemAvatar>
+								<ListItemText primary={t(`add.${product}`)} />
+							</ListItem>
+						)
+					})}
 				</List>
 			</Demo>
 		</Grid>
