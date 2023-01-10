@@ -8,8 +8,10 @@ const Header = () => {
 	return (
 		<AppBar className="header-strip" data-testid="Header">
 			<Toolbar className="tool-bar">
-				<Grid edge="start" className="log-container">
-					<Link to={'/'}>logo</Link>
+				<Grid edge="start" className="logo-container">
+					<Link className="logo" to={'/'}>
+						piece of cake
+					</Link>
 				</Grid>
 				<Grid container className="right-section" edge="end">
 					<Button className="help-btn">

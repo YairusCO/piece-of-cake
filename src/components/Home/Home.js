@@ -1,6 +1,6 @@
 import React from 'react'
-import bake from '../../assets/bake.jpg'
-import cake from '../../assets/cake.jpg'
+import bake from '../../assets/img/bake.jpg'
+import cake from '../../assets/img/cake.jpg'
 import { SELECT_INGREDIENT } from '../../util/routes'
 import { Link } from 'react-router-dom'
 

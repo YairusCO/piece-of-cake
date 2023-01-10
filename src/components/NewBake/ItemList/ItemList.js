@@ -15,7 +15,7 @@ const Demo = styled('div')(({ theme }) => ({
 	backgroundColor: theme.palette.background.paper,
 }))
 
-const ItemList = ({ shoppingList, t }) => {
+const ItemList = ({ removeFromShoppingList, shoppingList, t }) => {
 	console.log(shoppingList)
 	return (
 		<Grid className="item-list" data-testid="ItemList">
@@ -29,7 +29,13 @@ const ItemList = ({ shoppingList, t }) => {
 							<ListItem
 								key={idx}
 								secondaryAction={
-									<IconButton edge="end" aria-label="delete">
+									<IconButton
+										edge="end"
+										aria-label="delete"
+										onClick={() => {
+											removeFromShoppingList(product)
+										}}
+									>
 										<DeleteIcon />
 									</IconButton>
 								}
@@ -39,7 +45,7 @@ const ItemList = ({ shoppingList, t }) => {
 										<CakeIcon />
 									</Avatar>
 								</ListItemAvatar>
-								<ListItemText primary={t(`add.${product}`)} />
+								<ListItemText primary={t(`add.${product.item}`)} />
 							</ListItem>
 						)
 					})}

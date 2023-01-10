@@ -5,4 +5,5 @@ import { inject, observer } from 'mobx-react'
 
 export default inject(({ listStore }) => ({
 	shoppingList: listStore.shoppingList,
+	removeFromShoppingList: listStore.removeFromShoppingList,
 }))(observer(withTranslation()(ItemList)))

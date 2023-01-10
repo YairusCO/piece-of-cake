@@ -1,11 +1,10 @@
 import React from 'react'
 import Ingredients from '../SelectIngredient/Ingredientes'
 import { Button, Grid, Typography } from '@mui/material'
-import list from '../SelectIngredient/list.json'
 import ItemList from '../ItemList'
 import { Link } from 'react-router-dom'
 import { RECIPE } from '../../../util/routes'
-const Recipe = () => {
+const Recipe = ({ products }) => {
 	return (
 		<div className="recipe" data-testid="Recipe">
 			<Typography className="select-title"> Recipe component</Typography>
@@ -23,8 +22,8 @@ const Recipe = () => {
 					data-testid="SelectIngredient"
 					container
 				>
-					{list.product?.map((product, idx) => {
-						return <Ingredients product={product} idx={idx} key={idx} />
+					{products?.map((product, idx) => {
+						return <Ingredients product={product} key={idx} />
 					})}
 				</Grid>
 			</Grid>

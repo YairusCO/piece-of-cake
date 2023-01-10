@@ -9,11 +9,11 @@ import {
 	Button,
 } from '@mui/material'
 
-import img from '../../../../assets/bake.jpg'
-const Ingredientes = ({ product, t, handleClick }) => {
+import img from '../../../../assets/img/bake.jpg'
+const Ingredientes = ({ product, t, addToShoppingList, key }) => {
 	const { item } = product
 	return (
-		<Grid className="ingredientes" data-testid="Ingredientes">
+		<Grid className="ingredientes" data-testid="Ingredientes" key={key}>
 			<Card>
 				<CardHeader title={t(`add.${item}`)} />
 				<CardMedia component="img" height="194" image={img} alt="Paella dish" />
@@ -22,7 +22,7 @@ const Ingredientes = ({ product, t, handleClick }) => {
 						size="large"
 						color="primary"
 						onClick={() => {
-							handleClick(item)
+							addToShoppingList(product)
 						}}
 					>
 						{t('add.add')}
