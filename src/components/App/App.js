@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
+import history from '../../services/history'
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Router, Switch, Route } from 'react-router'
 import Home from '../Home'
 import Recipe from '../NewBake/Recipe'
 import Layout from '../Layout'
@@ -16,23 +17,22 @@ function App({ appWillUnmount, appMounted }) {
 	}, [appMounted, appWillUnmount])
 	return (
 		<div className="app">
-			<div className="center">
-				<BrowserRouter>
+			<Router history={history}>
+				<div className="center">
 					<Layout>
-						<Routes>
-							<Route exact path={HOME} element={<Home />} />
-							<Route exact path={RECIPE} element={<Recipe />} />
-							<Route
-								exact
-								path={SELECT_INGREDIENT}
-								element={<SelectIngredient />}
-							/>
-						</Routes>
+						{/* <Switch> */}
+						<Route exact path={HOME} component={Home} />
+						<Route exact path={RECIPE} component={Recipe} />
+						<Route
+							exact
+							path={SELECT_INGREDIENT}
+							component={SelectIngredient}
+						/>
+						{/* </Switch> */}
 					</Layout>
-				</BrowserRouter>
-			</div>
+				</div>
+			</Router>
 		</div>
 	)
 }
-
 export default App

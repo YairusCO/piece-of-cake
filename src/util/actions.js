@@ -1,5 +1,4 @@
 import keyMirror from 'key-mirror'
-import { NULL } from 'node-sass'
 
 const appActions = Object.freeze(
 	keyMirror({
@@ -18,8 +17,8 @@ const routeActions = Object.freeze(
 
 const add = Object.freeze(
 	keyMirror({
-		ADD: null,
-		SELECTED: null,
+		SELECT_INGREDIENT: null,
+		RECIPE: null,
 	})
 )
 

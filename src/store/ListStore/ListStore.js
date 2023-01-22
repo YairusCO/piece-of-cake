@@ -1,5 +1,7 @@
 import { observable, makeObservable, action, configure } from 'mobx'
 import { getProducts } from '../../services/apis/products'
+import { subscribe } from '../../services/pubsub'
+import Actions from '../../util/actions'
 class ListStore {
 	products = []
 	shoppingList = []
@@ -14,6 +16,9 @@ class ListStore {
 			getProducts: action,
 		})
 		this.getProducts = this.getProducts.bind(this)
+		subscribe(Actions.RECIPE, () => {
+			console.log('ssdfd')
+		})
 	}
 
 	async getProducts() {

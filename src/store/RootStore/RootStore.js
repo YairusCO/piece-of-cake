@@ -1,23 +1,25 @@
 import { action, configure, makeObservable } from 'mobx'
-
+import { dispatch, subscribe } from '../../services/pubsub'
+import Actions from '../../util/actions.js'
 configure({ enforceActions: 'observed' })
 
 class RootStore {
-  constructor({ listStore }) {
-    makeObservable(this, {
-      appMounted: action,
-      appWillUnmount: action,
-    })
+	constructor({ listStore, router }) {
+		makeObservable(this, {
+			appMounted: action,
+			appWillUnmount: action,
+		})
 
-    this.listStore = listStore
-    this.appMounted = this.appMounted.bind(this)
-    this.appWillUnmount = this.appWillUnmount.bind(this)
-  }
+		this.router = router
+		this.listStore = listStore
+		this.appMounted = this.appMounted.bind(this)
+		this.appWillUnmount = this.appWillUnmount.bind(this)
+	}
 
-  appMounted() {
-    this.listStore.getProducts()
-  }
-  appWillUnmount() {}
+	appMounted() {
+		this.listStore.getProducts()
+	}
+	appWillUnmount() {}
 }
 
 export default RootStore

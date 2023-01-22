@@ -1,9 +1,10 @@
 import React from 'react'
-import Ingredients from '../SelectIngredient/Ingredientes'
 import { Button, Grid, Typography } from '@mui/material'
 import ItemList from '../ItemList'
 import { Link } from 'react-router-dom'
 import { RECIPE } from '../../../util/routes'
+import Box from '@mui/material/Box'
+import TextField from '@mui/material/TextField'
 const Recipe = ({ products }) => {
 	return (
 		<div className="recipe" data-testid="Recipe">
@@ -15,17 +16,14 @@ const Recipe = ({ products }) => {
 						<Link to={RECIPE}>next</Link>
 					</Grid>
 				</Grid>
-				<Grid
-					item
-					xs={9}
-					className="select-ingredient"
-					data-testid="SelectIngredient"
-					container
+				<Box
+					sx={{
+						width: 500,
+						maxWidth: '100%',
+					}}
 				>
-					{products?.map((product, idx) => {
-						return <Ingredients product={product} key={idx} />
-					})}
-				</Grid>
+					<TextField fullWidth label="fullWidth" id="fullWidth" />
+				</Box>
 			</Grid>
 		</div>
 	)

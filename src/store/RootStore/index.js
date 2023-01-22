@@ -1,9 +1,8 @@
 import RootStore from './RootStore'
 import ListStore from '../ListStore'
-
-
+import router from '../../services/router'
 
 export default new RootStore({
-
-  listStore: new ListStore(),
+	router,
+	listStore: new ListStore(),
 })

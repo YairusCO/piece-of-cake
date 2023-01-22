@@ -2,8 +2,8 @@ import React from 'react'
 import Ingredients from './Ingredientes'
 import { Button, Grid, Typography } from '@mui/material'
 import ItemList from '../ItemList'
-import { Link } from 'react-router-dom'
 import { RECIPE } from '../../../util/routes'
+import history from '../../../services/history'
 
 const SelectIngredient = ({ products, addToShoppingList }) => {
 	return (
@@ -12,8 +12,14 @@ const SelectIngredient = ({ products, addToShoppingList }) => {
 			<Grid container>
 				<Grid item container xs={3} className="added-list">
 					<ItemList />
-					<Grid>
-						<Link to={RECIPE}>next</Link>
+					<Grid className="nxt-btn">
+						<Button
+							onClick={() => {
+								history.push(RECIPE)
+							}}
+						>
+							next
+						</Button>
 					</Grid>
 				</Grid>
 				<Grid
