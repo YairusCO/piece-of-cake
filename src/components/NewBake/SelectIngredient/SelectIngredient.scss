@@ -1,9 +1,15 @@
 .select-ingredient {
-	.select-title {
+	.select-title-grid {
+		height: 103px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		background-color: #551a8b9e;
-		font-size: 2rem;
-		text-transform: uppercase;
-		color: #ffff;
+		.select-title {
+			font-size: 2rem;
+			color: #ffff;
+			// font-family: font-header;
+		}
 	}
 }
 

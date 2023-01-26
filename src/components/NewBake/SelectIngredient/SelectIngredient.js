@@ -8,7 +8,9 @@ import history from '../../../services/history'
 const SelectIngredient = ({ products, addToShoppingList }) => {
 	return (
 		<div className="select-ingredient">
-			<Typography className="select-title">add item to bake</Typography>
+			<Grid className="select-title-grid">
+				<Typography className="select-title">Add Item To Bake</Typography>
+			</Grid>
 			<Grid container>
 				<Grid item container xs={3} className="added-list">
 					<ItemList />
