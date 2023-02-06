@@ -17,13 +17,15 @@ class ListStore {
 		})
 		this.getProducts = this.getProducts.bind(this)
 		subscribe(Actions.RECIPE, () => {
-			console.log('ssdfd')
+			console.log('RECIPE')
+		})
+		subscribe(Actions, () => {
+			console.log(Actions)
 		})
 	}
 
 	async getProducts() {
 		this.products = await getProducts()
-		console.log(this.products)
 	}
 
 	addToShoppingList = (obj) => {

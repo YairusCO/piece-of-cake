@@ -16,7 +16,6 @@ const Demo = styled('div')(({ theme }) => ({
 }))
 
 const ItemList = ({ removeFromShoppingList, shoppingList, t }) => {
-	console.log(shoppingList)
 	return (
 		<Grid className="item-list" data-testid="ItemList">
 			<Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">

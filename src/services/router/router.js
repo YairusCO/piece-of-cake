@@ -16,14 +16,17 @@ const extractParams = ({ search }) =>
 		}, {})
 
 router
-	.setRoute(HOME, { exact: false }, ({ params }) => {
-		dispatch(Actions.HOME, params)
+	.setRoute(HOME, { exact: false }, ({ params, urlRoute }) => {
+		dispatch(Actions.HOME, { params, urlRoute })
 	})
-	.setRoute(SELECT_INGREDIENT, ({ params }) => {
-		dispatch(Actions.SELECT_INGREDIENT, params)
+	.setRoute(HOME, { exact: false }, ({ params, urlRoute }) => {
+		dispatch(Actions.ROUTE_CHANGED, { params, urlRoute })
 	})
-	.setRoute(RECIPE, ({ params }) => {
-		dispatch(Actions.RECIPE, params)
+	.setRoute(SELECT_INGREDIENT, ({ params, urlRoute }) => {
+		dispatch(Actions.SELECT_INGREDIENT, { params, urlRoute })
+	})
+	.setRoute(RECIPE, ({ params, urlRoute }) => {
+		dispatch(Actions.RECIPE, { params, urlRoute })
 	})
 
 export default router
